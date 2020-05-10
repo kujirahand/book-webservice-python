@@ -1,0 +1,67 @@
+.page {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 796px;
+}
+h1 {
+  background-color: white;
+  color:brown;
+  padding: 8px 8px 8px 24px;
+  margin: 8px;
+}
+h2 {
+  padding: 4px; margin: 4px;
+  font-size: 1em;
+  border-bottom: 1px dotted silver;
+}
+h3 {
+  text-align: center;
+}
+.box {
+  padding: 8px; margin: 4px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.box_c {
+  padding: 8px; margin: 4px;
+  text-align:center;
+  border-bottom: 1px dotted #e0e0e0;
+}
+.haiku-list {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 400px;
+}
+.haiku {
+  border: 1px solid silver;
+  background-color: #f9f9fe;
+  line-height: 40px; font-size: 16px;
+  padding: 14px 20px 30px 20px;
+  margin: 14px 20px 20px 20px;
+  border-radius: 7px;
+  color: brown;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 
+    0 2px 5px rgba(0, 0, 0, 0.23);
+}
+.info {
+  padding: 6px; margin: 4px;
+  border-top: 1px dotted silver;
+  color: silver;
+  font-size: 10px;
+  text-align: right;
+}
+#msg {
+  font-size: 1.5em; font-weight: bold;
+  padding: 20px; margin: 8px;
+  border: 1px solid silver;
+  color: red;
+}
+#loginform {
+  padding: 4px 8px 4px 12px;
+}
+textarea {
+  width: 99%;
+}
+.footer {
+  text-align: center;
+}
+        

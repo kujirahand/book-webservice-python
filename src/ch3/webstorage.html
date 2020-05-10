@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html><meta charset="UTF=8"><body>
+  <textarea id="tbox" rows="5" cols="60"></textarea>
+  <script type="text/javascript">
+  // textareaのオブジェクトを取得 --- (*1)
+  const tbox = document.getElementById('tbox')
+  // 既にテキストが保存されていれば復元 --- (*2)
+  if (localStorage['tbox']) {
+    tbox.value = localStorage['tbox']
+  }
+  // キーが押された時にテキストを保存 --- (*3)
+  tbox.onkeydown = function (e) {
+    localStorage['tbox'] = tbox.value
+  }
+  </script>
+</body></html>
+

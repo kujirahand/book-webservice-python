@@ -1,0 +1,27 @@
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+}
+h1 {
+  background-color: #0078e7;
+  color: white;
+  padding: 10px; margin:0;
+}
+#info {
+  margin: 16px; padding: 8px;
+}
+select {
+    width:13em;
+}
+.fblock {
+  padding: 0em 0em 1em 2em;
+}
+.box {
+  border:1px solid silver;
+  padding: 8px; margin: 8px;
+}
+.box-noborder {
+  padding: 8px; margin: 8px;
+}
+th { text-align: right; }

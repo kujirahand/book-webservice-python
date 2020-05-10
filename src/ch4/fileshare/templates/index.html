@@ -1,0 +1,52 @@
+<!DOCRTYPE>
+<html><meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/pure-min.css">
+  <link rel="stylesheet" href="static/style.css?v=a7">
+<body>
+  <div class="content">
+    <h1>ファイル転送サービス</h1>
+  <div id="info">
+    <form action="/upload" method="POST"
+     enctype="multipart/form-data"
+     class="pure-form pure-form-stacked">
+      <fieldset>
+      <legend>最初にファイルを選んでください。</legend>
+      <div class="fblock">
+        <label for="upfile">転送したいファイルを指定</label>
+        <input type="file" name="upfile" id="upfile">
+      </div>
+      <legend>下記の必要項目を記述してください。</legend>
+      <div class="fblock">
+        <label for="name">お名前</label>
+        <input type="text" name="name" id="name"
+               placeholder="お名前">
+        <label for="memo">ファイルの説明</label>
+        <input type="text" name="memo" id="memo"
+               placeholder="ファイルの説明">
+        <label for="pw">ダウンロード時のパスワードを指定</label>
+        <input type="text" name="pw" id="pw"
+               placeholder="パスワード">
+        <label for="id">ダウンロード回数の制限</label>
+        <select name="count" id="count">
+          <option value="1">1回</option>
+          <option value="3" selected>3回</option>
+          <option value="100">100回</option>
+        </select>
+        <label for="limie">保存期間を指定</label>
+        <select name="limit">
+          <option value="1">1日(24時間)</option>
+          <option value="3" selected>3日</option>
+          <option value="7">7日</option>
+          <option value="365">365日</option>
+        </select>
+      </div>
+      <button type="submit"
+              class="pure-button pure-button-primary">
+      アップロード</button>
+      </fieldset>
+    </form>
+  </div>
+</div></body></html>
+

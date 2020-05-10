@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+  <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/pure-min.css">
+  <link rel="stylesheet" href="/static/side-menu.css">
+  <link rel="stylesheet" type="text/css"
+        href="{{ staticfile('style.css') }}">
+  <title>俳句SNS</title>
+</head><body>
+<div id="layout" class="page">
+{% block header %}
+<!-- ここにヘッダの内容 -->
+{% endblock %}
+<div id="main">
+<div class="header">
+<h1>
+  {% block title %}
+  俳句SNS
+  {% endblock %}
+</h1>
+</div><!-- end of .header -->
+  
+<div class="contents">
+  {% block contents %}
+  <!-- ここにメインコンテンツ -->
+  {% endblock %}
+</div><!-- end of .contents -->
+
+{% block footer %}
+  <p class="footer"><a href="/" class="pure-button">
+  トップページへ</a></p>
+{% endblock %}
+</div><!-- end of #main -->
+</div><!-- end of #layout -->
+
+{% block footer_script %}{% endblock %}
+</body></html>
+

@@ -1,0 +1,19 @@
+{% extends "layout_login.html" %}
+
+{% block title %}
+写真共有 &gt;<br>新規アルバムの作成
+{% endblock %}
+
+{% block contents %}
+<div class="form_block">
+  <form action="/album/new/try" method="GET"
+   class="pure-form pure-form-stacked">
+    <label for="name">新規アルバムの名前</label>
+    <input type="text" name="name" id="name"
+           placeholder="アルバムの名前">
+    <button class="pure-button pure-button-primary"
+            type="submit">作成</button>
+  </form>
+</div>
+{% endblock %}
+

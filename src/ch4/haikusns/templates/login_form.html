@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block contents %}
+  <div id="loginform">
+  <form action="/login/try" method="POST"
+   class="pure-form pure-form-aligned">
+  <legend>ログインしてください。</legend>
+  <fieldset>
+    <div class="pure-control-group">
+      <label for="user">ユーザー名</label>
+      <input type="text" name="user" id="user"
+             placeholder="ユーザー名">
+    </div>
+    <div class="pure-control-group">
+      <label for="pw">パスワード</label>
+      <input type="password" name="pw" id="pw"
+             placeholder="パスワード">
+    </div>
+    <div class="pure-controls">
+      <button type="submit"
+       class="pure-button pure-button-primary">
+      ログイン</button>
+    </div>
+  </fieldset>
+  </form>
+  </div>
+{% endblock %}
+

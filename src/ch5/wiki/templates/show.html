@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+  <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/pure-min.css">
+  <style>
+  .content { padding: 0.5em; }
+  h1#page_name {
+    background-color: silver;
+    margin:8px; padding: 8px; }
+  h1 { border-bottom: 1px solid silver; }
+  code { background-color: yellow; padding: 4px; }
+  </style>
+</head><body>
+<div class="content">
+  <!-- ページタイトルの表示 ==== (*1) -->
+  <h1 id="page_name">{{ page_name }}</h1>
+  <!-- ページ本文の表示 ==== (*2) -->
+  <div style="padding:0.5em;">{{ body | safe }}</div>
+  <hr>
+  <div>
+    <!-- 編集ボタンの表示 ==== (*3) -->
+    <a class="pure-button"
+     href="/edit/{{page_name}}">編集</a>
+    <a class="pure-button"
+     href="/new">新規</a>
+  </div>
+</div></body></html>
+

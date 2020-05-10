@@ -1,0 +1,19 @@
+{% extends "layout_login.html" %}
+
+{% block title %}
+{{ id }}さん<br>の作品集
+{% endblock %}
+
+{% block contents %}
+<div style="padding:12px;">
+{% for i in photos %}
+  <div class="photo" style="float:left;width:160px;">
+    <img src='/photo/{{ i.file_id }}?t=thumb' width="150"><br>
+    <a href="/album/{{ i.album_id }}">{{ i.name }}より</a> - 
+    <span class="datetime">{{ i.created_at }}</span>
+  </div>
+{% endfor %}
+</div>
+<div style="clear:both;"></div>
+{% endblock %}
+

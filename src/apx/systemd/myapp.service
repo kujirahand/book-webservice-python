@@ -1,0 +1,21 @@
+[Unit]
+Description=uWSGI instance for testapp
+After=syslog.target
+
+[Service]
+ExecStart=/home/vagrant/.pyenv/shims/uwsgi --ini /home/vagrant/testapp/app.ini
+WorkingDirectory=/home/vagrant/testapp
+
+User=vagrant
+Group=www-data
+RuntimeDirectory=uwsgi
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
+
+

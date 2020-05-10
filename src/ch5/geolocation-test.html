@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><body>
+<div id="info" style="font-size:60px"></div>
+
+<script type="text/javascript">
+  // #infoを取得
+  const info = document.querySelector('#info')
+  // 利用できるかチェック
+  if ('geolocation' in navigator) {
+      info.innerHTML = "確認中"
+  } else {
+      info.innerHTML = "GeoLocationが使えません"
+  }
+  // 現在位置の監視を開始
+  var wid = navigator.geolocation.watchPosition(watchFunc)
+  // 現在位置を取得した場合の処理
+  function watchFunc(pos) {
+    info.innerHTML = "位置情報: 35.659025, 139.745025" 
+        /*
+        pos.coords.latitude + ',' +
+        pos.coords.longitude
+        */
+  }
+</script>
+</body></html>
+

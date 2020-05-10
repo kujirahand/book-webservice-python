@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><body><h1>住所入力</h1>
+  <!-- 住所入力フォーム --- (*1) -->
+  <div><form>
+    郵便番号: <br>
+    <input type="text" name="zip" id="zip">
+    <input type="button" value="自動入力" id="zipBtn"><br>
+    住所: <br>
+    <input type="text" name="addr" id="addr" size="60"><br>
+    <input type="submit" value="送信">
+  </form></div>
+  <!-- jQueryの取り込み --- (*2) -->
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script>
+    // 郵便番号APIで住所を得る --- (*3)
+    const API = "/api?q="
+    const zipBtn = document.querySelector('#zipBtn')
+    const zip = document.querySelector('#zip')
+    const addr = document.querySelector('#addr')
+    // ボタンを押した時の動作 --- (*4)
+    zipBtn.onclick = function () {
+      const q = zip.value.replace('-', '')
+      addr.value = '' // 住所入力ボックスを空にしておく
+      jQuery.get(API + q, {}, gotAddress, 'json')
+    }
+    // APIからの応答を得た時の動作 --- (*5)
+    function gotAddress(data) {
+      if (data.length == 0) return
+      if (addr.value == '') { // 空であれば住所を設定
+        addr.value = data[0]
+      }
+    }
+  </script>
+</body></html>
+

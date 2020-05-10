@@ -1,0 +1,21 @@
+<html><head>
+<style>
+  h3 { background-color: silver; padding:8px; }
+  div.user {
+      border: 1px dotted silver;
+      margin: 8px; padding: 8px;
+  }
+</style>
+</head><body>
+  <h1>
+      {% block title %}
+      <!--ここにタイトルを表示 -->
+      {% endblock %}
+  </h1>
+  <div>
+    {% block contents %}
+    <!-- ここにコンテンツを表示 -->
+    {% endblock %}
+  </div>
+</body></html>
+

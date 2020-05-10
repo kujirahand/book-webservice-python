@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+  <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/pure-min.css">
+</head><body><div style="padding:0.5em;">
+  <h1>編集: {{ page_name }}</h1>
+  <!-- 編集フォーム === (*1) -->
+  <form action="/edit_save/{{page_name}}" method="POST"
+        class="pure-form pure-form-stacked">
+    <fieldset>
+      <textarea name="body" rows="10"
+       style="width:99%;">{{ body }}</textarea>
+      <input type="submit"
+             class="pure-button pure-button-primary"
+             value="保存">
+    </fieldset>
+  </form>
+</div></body></html>
+

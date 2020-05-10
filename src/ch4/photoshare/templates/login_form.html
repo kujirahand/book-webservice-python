@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block contents %}
+<h3>ログインしてください</h3>
+<div class="form_block">
+<form action="/login/try" method="POST"
+  class="pure-form pure-form-stacked">
+  <label id="user">ユーザー名</label>
+  <input type="text" name="user" id="user"
+    placeholder="ユーザー名">
+  <label for="pw">パスワード</label>
+  <input type="password" name="pw" id="pw"
+    placeholder="パスワード">
+  <button type="submit" class="pure-button pure-button-primary">
+  ログイン</button>
+</form>
+</div>
+{% endblock %}
+

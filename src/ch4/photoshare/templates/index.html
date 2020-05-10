@@ -1,0 +1,26 @@
+{% extends "layout_login.html" %}
+
+{% block contents %}
+<h3>写真一覧</h3>
+{% if photos | length == 0 %}
+  <div class="box">まだ写真はありません。</div>
+{% endif %}
+<div class="photo_list">
+{% for i in photos %}
+  <div class="photo">
+    <div class="photo_border">
+      <img src='/photo/{{ i.file_id }}?t=thumb'
+           width="300">
+      <span class="datetime">{{ i.created_at }}</span>
+    </div>
+    <div class="photo_info">
+      <a class="pure-button"
+       href="/user/{{ i.user_id }}">{{ i.user_id }}さん</a> &gt;
+      <a class="pure-button"
+       href="/album/{{ i.album_id }}">{{ i.name }}</a><br>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% endblock %}
+

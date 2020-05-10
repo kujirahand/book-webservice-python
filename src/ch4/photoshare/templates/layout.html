@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+  <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/pure-min.css">
+  <link rel="stylesheet" href="/static/side-menu.css">
+  <link rel="stylesheet" type="text/css"
+        href="{{ staticfile('style.css') }}">
+  <title>写真共有</title>
+</head><body>
+<div id="layout" class="page">
+{% block header %}
+  <!-- ここにヘッダ -->
+{% endblock %}
+
+<div id="main">
+<div class="header">
+  <h1>{% block title %}写真共有{% endblock %}</h1>
+</div><!-- end of .header -->
+
+{% block contents %}
+<!-- ここにメインコンテンツ -->
+{% endblock %}
+
+{% block footer %}
+<div class="footer">
+  <a href="/" class="pure-button">トップページへ</a>
+</div><!-- end of .footer -->
+{% endblock %}
+</div><!-- end of #layout -->
+
+{% block footer_script %}{% endblock %}
+</body></html>
+

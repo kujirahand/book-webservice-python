@@ -1,0 +1,15 @@
+{% extends "layout_login.html" %}
+{% block contents %}
+  <h3>俳句の書き込み</h3>
+  <div class="haiku-list">
+  <form action="/write/try" method="POST"
+    class="pure-form">
+    <textarea name="text" rows="4"></textarea>
+    <br><br>
+    <button type="submit" class="pure-button pure-button-primary">
+    書き込み</button>
+  </form>
+  </div>
+  <br><br><br>
+{% endblock %}
+

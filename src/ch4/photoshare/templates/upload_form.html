@@ -1,0 +1,41 @@
+{% extends "layout_login.html" %}
+
+{% block title %}
+写真共有 &gt;<br>アップロード
+{% endblock %}
+
+{% block contents %}
+<div class="box">
+  <form action="/upload/try" method="POST"
+    enctype="multipart/form-data"
+    class="pure-form pure-form-aligned">
+    <legend>写真ファイルを選んでください。</legend>
+    <div class="pure-control-group">
+      <label for="upfile">JPEGファイルを選択:</label>
+      <input type="file" name="upfile" id="upfile">
+    </div>
+    <div class="pure-control-group">
+      <label for="album">アルバムの選択:</label>
+      <select name="album" id="album">
+        <option value="0">なし</option>
+        {% for i in albums %}
+          <option value="{{ i.album_id }}">
+            {{ i.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="pure-controls">
+      <button type="submit" class="pure-button pure-button-primary">
+      アップロード</button>
+    </div>
+  </form>
+</div>
+
+<div class="box">
+  <p>以下よりアルバムを作成できます。</p>
+  <a class="pure-button"
+      href="/album/new">→新規アルバムを作成</a>
+</div>
+<br>
+{% endblock %}
+

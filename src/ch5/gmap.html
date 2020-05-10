@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<!-- APIキーを指定してライブラリの読込 -->
+<script type="text/javascript"
+  src="http://maps.google.com/maps/api/js?key={ここにAPIキー}&language=ja"
+  ></script>
+</head><body>
+<div id="map" style="width:800px;height:600px"></div>
+<script type="text/javascript">
+  // 緯度経度の指定 --- (*1)
+  const defPos = new google.maps.LatLng(
+  	35.6585840, 139.7454316)
+  // マップの指定 --- (*2)
+  const options = {
+  	zoom: 18,
+  	center: defPos,
+  	mapTypeId: 'roadmap'
+  }
+  // マップの表示 --- (*3)
+  const map = new google.maps.Map(
+    document.querySelector('#map'), options)
+  // マーカーを表示 --- (*4)
+  const marker = new google.maps.Marker({
+  	position: defPos,
+  	map: map,
+  	label: {
+  	  text: 'ここで待っているよ',
+  	  color:'blue'
+  	}
+  })
+</script>
+</body></html>
+

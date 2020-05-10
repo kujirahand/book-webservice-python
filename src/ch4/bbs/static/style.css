@@ -1,0 +1,32 @@
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+}
+h1 {
+    background-color: #0078e7;
+    color: white;
+    padding: 10px; margin:0;
+}
+form { padding: 8px; }
+textarea { width: 99%; }
+.box {
+    border-left: 12px solid #0078e7;
+    border-bottom: 1px solid #c0c0f0;
+    border-top: 1px solid #f0f0f0;
+    margin: 8px; padding: 8px;
+}
+.box_h {
+    margin:4px; padding: 4px;
+}
+#menu-switch {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    width: 40px;
+}
+#menu {
+    display: none;
+    padding: 12px;
+    border:1px solid silver;
+}

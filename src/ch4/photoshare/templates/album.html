@@ -1,0 +1,27 @@
+{% extends "layout_login.html" %}
+
+{% block title %}{{ album.name }}{% endblock %}
+
+{% block contents %}
+<h3>{{ album.user_id }}さんのアルバム</h3>
+<div class="photo_list">
+{% for i in photos %}
+  <div class="photo">
+    <div class="photo_border">
+      <a href="/photo/{{ i.file_id }}">
+        <img src="/photo/{{ i.file_id }}"
+             width="300">
+      </a><br>
+      <span class="datetime">{{ i.created_at }}</span>
+  </div><br>
+  </div>
+{% endfor %}
+</div>
+
+<div class="info_box">
+  <a class="pure-button"
+    href="/user/{{ album.user_id }}">
+    {{ album.user_id }}さんの作品集へ</a>
+</div>
+{% endblock %}
+
