@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html><meta charset="UTF-8">
+<html lang="ja"><head><meta charset="UTF-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0">
+  <title>会員制の掲示板</title>
   <link rel="stylesheet" href="static/pure-min.css">
   <link rel="stylesheet" href="static/style.css?v=0220">
-  <body><div class="content">
+</head><body><div class="content">
   <!-- 書き込みフォーム === (*1) -->
   <h1><a id="menu-switch" href="#">≡</a>
     会員制の掲示板 - {{ user }}</h1>
@@ -31,7 +32,7 @@
     </div>
   {% endfor %}
   <!-- ハンバーグメニューの開閉処理 === (*3) -->
-  <script type="text/javascript">
+  <script>
   function $(id) { return document.querySelector(id) }
   $("#menu-switch")._b = false
   $("#menu-switch").onclick = ()=>{
