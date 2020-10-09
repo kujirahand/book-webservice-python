@@ -17,7 +17,7 @@ def index():
 def setname():
     # GETの値を取得 --- (*3)
     name = request.args.get('username')
-    if name is None: return redirect('/')
+    if not name: return redirect('/')
     # セッションに値を保存 --- (*4)
     session['name'] = name
     # 他のページにリダイレクト --- (*5)
