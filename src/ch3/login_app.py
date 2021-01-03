@@ -21,7 +21,7 @@ def index():
     <input type="password" name="pw"><br>
     <input type="submit" value="ログイン">
     </form>
-    <p><a href="/private">→秘密のページ</a></p>
+    <p><a href="/private">→秘密のページ</a></p></body></html>
     """
 
 @app.route('/check_login', methods=['POST'])
