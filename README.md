@@ -12,4 +12,16 @@
 サンプルプログラムをダウンロードするには、ページ右上にある緑色のボタン[Code]をクリックし、続いて[Download ZIP]をクリックします。
 そして、ZIPファイルを解凍してご利用ください。
 
+# 実行時注意のメモ
+
+(注意) 書籍では、Flaskの対象バージョンは、1.1.1となっております。
+
+```
+pip install Flask==1.1.1
+```
+
+なお、2022年のFlask 2.0でパラメータ名に仕様変更がありました。
+
+そのため、[こちら](https://github.com/pallets/flask/issues/4753)にあるように、send_fileを使う時、`attachment_filename`を`download_name`と変更してください。
+
 
