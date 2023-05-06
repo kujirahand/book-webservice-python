@@ -1,4 +1,6 @@
 import os, json, datetime
+import fcntl
+import time
 
 # 保存先のファイルを指定 --- (*1)
 BASE_DIR = os.path.dirname(__file__)
